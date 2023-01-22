@@ -9,9 +9,12 @@ e.g. Springboot @RestController can be used to create REST APi
 Trades are stored in in-memory datastrcutre. TreeSet is used as it sorts the data. (TreeMap can also be used)
 in the real application trades can be stored in external SQL or NOSQL database to spport persistence and scale.
 in that case TradeDao interface need to be implemented which can interact with the database.
+Dates are stored as millisecond timestamps. While reading or displaying they are converted to readable format.
 ### 3. Trade Expiry
 Trade Expirey service runs as a scheduled task. its run rate need be injected to TradeService
 as this is test assignment, in order to test it is started with 3 second delay (first run) and 10 second rate (subsequent runs).
+### 4. Output
+All the trades in the system are stored and displayed 
 
 ## Command Line input
 ### 1. Start the java application (App class)
@@ -21,9 +24,9 @@ It also test validations by inputting some data which fails the validations
 It also demonstrates thread expiry scheduler which sets expiry as true when maturity date and time passes.
 ### 3. After that there are 3 options 
 "Please run the command: add | show | exit"
-- add - add a new trade - it will ask to input each field needed by the trade
-= show - display all the trades in the store
-- exit - exit the application 
+- add - add a new trade - it will ask to input each field needed by the trade.
+- show - display all the trades in the store (Sorted with tradeId (asecnding), tradeVersion (descending)
+- exit - exit the application.
 
 ## JUNIT Tests
 ### 1. Integration Tests
