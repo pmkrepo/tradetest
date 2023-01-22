@@ -18,12 +18,13 @@ as this is test assignment, in order to test it is started with 3 second delay (
 All the trades in the system are stored and displayed by tradeId (ascending) and then tradeVersion (descending)
 
 ## Command Line input
-### 1. Start the java application (App class)
-### 2. It asks "Do you want to add pre-defined test data? (Y/N): "
+### 1. Build application using maven - mvn clean install
+### 2. Start the java application (App class)
+### 3. It asks "Do you want to add pre-defined test data? (Y/N): "
 Input "Y" or "y"  so that trade store is initialized with some pre-defined data 
 It also test validations by inputting some data which fails the validations
 It also demonstrates thread expiry scheduler which sets expiry as true when maturity date and time passes.
-### 3. After that there are 3 options 
+### 4. After that there are 3 options 
 "Please run the command: add | show | exit"
 - add - add a new trade - it will ask to input each field needed by the trade.
 - show - display all the trades in the store (Sorted with tradeId (asecnding), tradeVersion (descending)
