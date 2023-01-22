@@ -35,3 +35,14 @@ They test the flow of the data through the system.
 
 ### 2. Unit tests
 All other tests are unit tests and they test single class.
+
+## Design Patterns
+### 1. Dependnecy Injection
+DAO, Valdiation chain are injected into TradeService.
+Currently Spring is not used but when used so main application need to inject at startup.
+When IOC like Spring used, they can be injected automatically using @Autowired.
+
+### 2, Chain of Responsibility
+Validations use chain of responsibility pattern so that valdiations can be added and removed from the chain without impacting the client (TradeService)
+
+
