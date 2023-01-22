@@ -41,9 +41,10 @@ All other tests are unit tests and they test single class.
 DAO, Valdiation chain are injected into TradeService.
 Currently Spring is not used but when used so main application need to inject at startup.
 When IOC like Spring used, they can be injected automatically using @Autowired.
-
 ### 2, Chain of Responsibility
 Validations use chain of responsibility pattern so that valdiations can be added and removed from the chain without impacting the client (TradeService)
+### 3. Data Access Object
+Decouple data access from application so that it can be changed without impacting the main application
 
 
 
